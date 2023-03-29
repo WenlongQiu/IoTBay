@@ -1,4 +1,5 @@
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
+<%@page import="user.java.user" %>
 <!DOCTYPE html>
 <html>
     <head>
@@ -12,6 +13,7 @@
         %>
         <h1>Thanks for registering.</h1>
         <form method="POST" action="register.jsp">
+            <p>User Name: <input type="text" id="username" name="username"></p>
         <p>email:
          <input type="text" id="email" name="email"></p>
         <p>Full Name:
@@ -26,9 +28,19 @@
     </form>
         <%
             }
-            else{ %>
+            else{ 
+                String email = request.getParameter("email");
+                String name = request.getParameter("name");
+                String username = request.getParameter("username");
+                String password = request.getParameter("password");
+                session.setAttribute("email",email);
+                session.setAttribute("name",name);
+                session.setAttribute("username",username);
+                session.setAttribute("password",password);
+        %>
                 <p>Register Complete. Click <a href="login.jsp">here</a> to login.</p>
-          <%  }
+          <% 
+              }
 }
         %>
     </body>
