@@ -33,8 +33,8 @@
                 String name = request.getParameter("name");
                 String username = request.getParameter("username");
                 String password = request.getParameter("password");
-                session.setAttribute("email",email);
-                session.setAttribute("name",name);
+                session.setAttribute("emailAddress",email);
+                session.setAttribute("fullName",name);
                 session.setAttribute("username",username);
                 session.setAttribute("password",password);
         %>
