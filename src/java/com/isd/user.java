@@ -1,22 +1,22 @@
 package com.isd;
+import java.io.Serializable;
 
-public class user {
+public class user implements Serializable{
     private String fullName;
     private String password;
     private String username;
     private String emailAddress;
-    private String gender;
+    private String address;
     
-//    public user() {}
-//
-//    public user(String fullName, String password, String username, String emailAddress, String gender) {
-////    public user() {
-//        this.fullName = fullName;
-//        this.password = password;
-//        this.username = username;
-//        this.emailAddress = emailAddress;
-//        this.gender = gender;
-//    }
+    public user() {}
+    
+    public user(String name, String pwd, String user, String email, String add) {
+        this.fullName = name;
+        this.password = pwd;
+        this.username = user;
+        this.emailAddress = email;
+        this.address = add;
+    }
 
     public String getFullName() {
         return fullName;
@@ -50,12 +50,12 @@ public class user {
         this.emailAddress = emailAddress;
     }
 
-    public String getGender() {
-        return gender;
+    public String getAddress() {
+        return address;
     }
 
-    public void setGender(String gender) {
-        this.gender = gender;
+    public void setAddress(String address) {
+        this.address = address;
     }
 
 }

@@ -7,6 +7,9 @@
         <title>Login Page</title>
     </head>
     <body>
+        <%
+          user user = (user) session.getAttribute("user");
+        %>  
         <h1>Welcome Back!</h1>
         <p>You could login to IoTBay at here...</p>
         <form method="POST" action="welcome.jsp">
