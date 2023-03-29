@@ -6,9 +6,13 @@
         <title>Register Page</title>
     </head>
     <body>
-        <h1>Hello</h1>
-    <form method="POST" action="welcome.jsp">
-         <p>email:
+        <%
+            String submitted = request.getParameter("submit");
+            if (submitted == null){
+        %>
+        <h1>Thanks for registering.</h1>
+        <form method="POST" action="register.jsp">
+        <p>email:
          <input type="text" id="email" name="email"></p>
         <p>Full Name:
          <input type="text" id="fullName" name="fullName"></p>
@@ -18,7 +22,14 @@
         <input type="password" id="password" name="password"></p>
         <p>address:
         <input type="text" id="address" name="address"></p>
-        <input type="submit" id="button" name="button">
-    </form> 
+        <input type="submit" id="submit" name="submit">
+    </form>
+        <%
+            }
+            else{ %>
+                <p>Register Complete. Click <a href="login.jsp">here</a> to login.</p>
+          <%  }
+}
+        %>
     </body>
 </html>
