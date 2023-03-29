@@ -7,11 +7,11 @@
         <title>logout Page</title>
     </head>
     <body>
-      
-       <form method="POST" action="index.jsp">
-           
-  
-  <input type="submit" id="button" name="button">
+        <%
+            session.invalidate();
+        %>
+        <h1>You have logged out. Thanks for login.</h1>
+        <p><a href="index.jsp">Click here to homepage</a></p>
 </form> 
     </body>
 </html>

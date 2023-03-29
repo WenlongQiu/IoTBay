@@ -1,3 +1,5 @@
+package com.users;
+
 public class user {
     private String fullName;
     private String password;

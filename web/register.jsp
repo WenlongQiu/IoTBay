@@ -41,7 +41,6 @@
                 <p>Register Complete. Click <a href="login.jsp">here</a> to login.</p>
           <% 
               }
-}
         %>
     </body>
 </html>

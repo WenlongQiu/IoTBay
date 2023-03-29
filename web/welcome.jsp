@@ -8,10 +8,21 @@
     </head>
     <body>
         <%
-            
+            String submitted = request.getParameter("submit");
+            String username = session.getAttribute("username");
+            String password = session.getAttribute("password");
+            if (submitted != null){
+                String typedUsername = request.getParameter("username");
+                String typedPassword = request.getParameter("password");
+                if (username.equals(typedUsername) && password.equals(typedPassword)){ %>
+                    <h1>Welcome back: <%  out.println(name); %></h1>
+                    <p>You are logged as <%  out.println(name); %>, <<% out.println(email); %>></p>
+                    <p>[ <a href="logout.jsp">Logout</a> ]</p>
+           <%   }
+                else{ %>
+                    <p>Incorrect Username and/or password! Click <a href="login.jsp">here</a> to retry login.</p>
+           <%     }
+            }
         %>
-        <h1>Welcome back: <%  out.println(name); %></h1>
-        <p>You are logged as <%  out.println(name); %>, <<% out.println(email); %>></p>
-        <p>[ <a href="logout.jsp">Logout</a> ]</p>
     </body>
 </html>
