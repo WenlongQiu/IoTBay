@@ -1,4 +1,4 @@
-package com.users;
+package com.isd;
 
 public class user {
     private String fullName;
@@ -6,14 +6,17 @@ public class user {
     private String username;
     private String emailAddress;
     private String gender;
-
-    public user(String fullName, String password, String username, String emailAddress, String gender) {
-        this.fullName = fullName;
-        this.password = password;
-        this.username = username;
-        this.emailAddress = emailAddress;
-        this.gender = gender;
-    }
+    
+//    public user() {}
+//
+//    public user(String fullName, String password, String username, String emailAddress, String gender) {
+////    public user() {
+//        this.fullName = fullName;
+//        this.password = password;
+//        this.username = username;
+//        this.emailAddress = emailAddress;
+//        this.gender = gender;
+//    }
 
     public String getFullName() {
         return fullName;
@@ -54,4 +57,5 @@ public class user {
     public void setGender(String gender) {
         this.gender = gender;
     }
+
 }

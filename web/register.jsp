@@ -1,5 +1,5 @@
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
-<%@page import="com.isd.user" %>
+<%@page import="com.isd.*" %>
 <!DOCTYPE html>
 <html>
     <head>
@@ -33,6 +33,13 @@
                 String name = request.getParameter("name");
                 String username = request.getParameter("username");
                 String password = request.getParameter("password");
+                String gender = request.getParameter("gender");
+                user user = new user();
+                user.setFullName(name);
+                user.setUsername(username);
+                user.setEmailAddress(email);
+                user.setPassword(password);
+                user.setGender(gender);
                 session.setAttribute("emailAddress",email);
                 session.setAttribute("fullName",name);
                 session.setAttribute("username",username);
