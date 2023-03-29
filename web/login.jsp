@@ -17,5 +17,6 @@
             <p>Password: <input type="password" id="password" name="password"></p>
             <input type="submit" value="Submit" name="submit" id="submit">
         </form>
+        <p>[ <a href="index.jsp">Back to Homepage</a> ]</p>
     </body>
 </html>

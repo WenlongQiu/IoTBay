@@ -9,7 +9,6 @@
     <body>
         <%
             user user = (user) session.getAttribute("user");
-            out.println("Retrieved user object from session: " + user);
             String submitted = request.getParameter("submit");
             if (user != null && submitted != null) {
                 String typedUsername = request.getParameter("username");
@@ -19,9 +18,11 @@
             if (typedUsername.equals(realUsername) && typedPassword.equals(realPassword)){
                 String email = user.getEmailAddress();
                 String name = user.getFullName();
+                String address = user.getAddress();
         %>
         <h1>Welcome back: <%= name %></h1>
         <p>You are logged as <%= name %>, <%= email %></p>
+        <p>Your address is: <%= address %></p>
         <p>[ <a href="logout.jsp">Logout</a> ]</p>
         <%
                 } else {
@@ -31,9 +32,9 @@
                 }
             }
             else{ 
-                if (user == null){
-                    out.println("Internal Error!"); 
-                }
+                if (user == null){ %>
+                <p>It seems like you did not registered with us. Click <a href="register.jsp">here</a> to register.</p>
+            <%    }
                 else {
                     out.println("Unauthorised access!");
                 }

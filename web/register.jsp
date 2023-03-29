@@ -16,9 +16,10 @@
                 String password = request.getParameter("password");
                 String address = request.getParameter("address");
                 user u = new user(name,password,username,email,address);
-                out.println("Created user object: " + u);
                 session.setAttribute("user", u); %>
+                <div>
                     <p>Register Complete. Click <a href="login.jsp">here</a> to login.</p>
+                </div>
             <% 
             } else {
         %>
@@ -35,6 +36,7 @@
         <input type="text" id="address" name="address"></p>
         <input type="submit" id="submit" name="submit">
     </form>
+        <p>[ <a href="index.jsp">Back to Homepage</a> ]</p>
         <%
             }
         %>
