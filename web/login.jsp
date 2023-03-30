@@ -13,7 +13,7 @@
         <h1>Welcome Back!</h1>
         <p>You could login to IoTBay at here...</p>
         <form method="POST" action="welcome.jsp">
-            <p>UserName: <input type="text" id="username" name="username"></p>
+            <p>Email Address: <input type="text" id="username" name="username"></p>
             <p>Password: <input type="password" id="password" name="password"></p>
             <input type="submit" value="Submit" name="submit" id="submit">
         </form>

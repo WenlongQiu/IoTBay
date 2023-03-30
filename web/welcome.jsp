@@ -13,7 +13,7 @@
             if (user != null && submitted != null) {
                 String typedUsername = request.getParameter("username");
                 String typedPassword = request.getParameter("password");
-                String realUsername = user.getUsername();
+                String realUsername = user.getEmailAddress();
                 String realPassword = user.getPassword();
             if (typedUsername.equals(realUsername) && typedPassword.equals(realPassword)){
                 String email = user.getEmailAddress();

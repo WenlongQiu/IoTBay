@@ -12,10 +12,9 @@
             if (submitted != null){
                 String email = request.getParameter("email");
                 String name = request.getParameter("name");
-                String username = request.getParameter("username");
                 String password = request.getParameter("password");
                 String address = request.getParameter("address");
-                user u = new user(name,password,username,email,address);
+                user u = new user(name,password,email,address);
                 session.setAttribute("user", u); %>
                 <div>
                     <p>Register Complete. Click <a href="login.jsp">here</a> to login.</p>
@@ -25,9 +24,9 @@
         %>
         <h1>Thanks for registering.</h1>
         <form method="POST" action="register.jsp">
-            <p>User Name: <input type="text" id="username" name="username"></p>
         <p>email:
          <input type="text" id="email" name="email"></p>
+        <p>Hint: The email will becomes your login id.</p>
         <p>Full Name:
          <input type="text" id="name" name="name"></p>
         <p>Password:
