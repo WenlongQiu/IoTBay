@@ -24,6 +24,7 @@
                     <p>Password: <%= password %></p>
                     <p>Address: <%= address %></p>
                     <p>Click <a href="login.jsp">here</a> to login.</p>
+                    <p>Click <a href="index.jsp">here</a> to homepage.</p>
                 </div>
             <% 
             } else {
