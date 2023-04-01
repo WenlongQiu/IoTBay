@@ -17,7 +17,13 @@
                 user u = new user(name,password,email,address);
                 session.setAttribute("user", u); %>
                 <div>
-                    <p>Register Complete. Click <a href="login.jsp">here</a> to login.</p>
+                    <h2>Register Complete. </h2>
+                    <p>Here is your user information: </p>
+                    <p>Email: <%= email %></p>
+                    <p>Full Name: <%= name %></p>
+                    <p>Password: <%= password %></p>
+                    <p>Address: <%= address %></p>
+                    <p>Click <a href="login.jsp">here</a> to login.</p>
                 </div>
             <% 
             } else {

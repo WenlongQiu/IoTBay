@@ -23,6 +23,7 @@
         <h1>Welcome back: <%= name %></h1>
         <p>You are logged as <%= name %>, <%= email %></p>
         <p>Your address is: <%= address %></p>
+        <p>[ <a href="index.jsp">Back to homepage</a> ]</p>
         <p>[ <a href="logout.jsp">Logout</a> ]</p>
         <%
                 } else {
