@@ -19,6 +19,7 @@
                 String email = user.getEmailAddress();
                 String name = user.getFullName();
                 String address = user.getAddress();
+                session.setAttribute("logged","true");
         %>
         <h1>Welcome - <%= name %></h1>
         <p>You are logged as <%= name %>, <%= email %></p>

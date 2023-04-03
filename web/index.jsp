@@ -10,7 +10,7 @@
         <h1>Welcome to IoT Bay!</h1>
         <%
             user user = (user) session.getAttribute("user");
-            if (user == null){ %>
+            if (user == null || session.getAttribute("logged") == null){ %>
             <p>You have not logged in. Click <a href="login.jsp">here</a> for log in, or click <a href="register.jsp">here</a> for register.</p>
         <% } else {
             String name = user.getFullName();
