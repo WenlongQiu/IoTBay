@@ -15,7 +15,7 @@
                 String name = request.getParameter("name");
                 String password = request.getParameter("password");
                 String address = request.getParameter("address");
-                if (if ifAgreeTOS != null){
+                if (ifAgreeTOS != null){
                     user u = new user(name,password,email,address,ifAgreeTOS);
                     session.setAttribute("user", u); 
 %>
