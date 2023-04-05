@@ -9,12 +9,12 @@
     <body>
  <%
             String submitted = request.getParameter("submit");
-            String ifAgreeTOS = request.getParameter("tos");
             if (submitted != null){
                 String email = request.getParameter("email");
                 String name = request.getParameter("name");
                 String password = request.getParameter("password");
                 String address = request.getParameter("address");
+                String ifAgreeTOS = request.getParameter("tos");
                 if (ifAgreeTOS != null){
                     user u = new user(name,password,email,address,ifAgreeTOS);
                     session.setAttribute("user", u); 
@@ -26,7 +26,7 @@
                     <p>Full Name: <%= name %></p>
                     <p>Password: <%= password %></p>
                     <p>Address: <%= address %></p>
-                    <p>Agree with ToS: <%= tos %></p>
+                    <p>Agree with ToS: <%= ifAgreeTOS %></p>
                     <p>Click <a href="index.jsp">here</a> to homepage.</p>
                 </div>
             <% 
@@ -34,8 +34,10 @@
                 else { %>
                     <p>You did not agree with our Terms of Service!</p>
                     <p>Click <a href="javascript:history.back();">Here</a> to modify your registration.</p>
-        <%    }
-        }
+        <%      }
+            } else {
         %>
+                <p>Unauthorized Access!</p>
+        <% } %>
     </body>
 </html>
