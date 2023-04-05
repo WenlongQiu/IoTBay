@@ -5,7 +5,7 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>JSP Page</title>
+        <title>Register Complete - Welcome - IoT Bay</title>
     </head>
     <body>
  <%
@@ -24,11 +24,10 @@
                     <p>Full Name: <%= name %></p>
                     <p>Password: <%= password %></p>
                     <p>Address: <%= address %></p>
-                    <p>Click <a href="login.jsp">here</a> to login.</p>
                     <p>Click <a href="index.jsp">here</a> to homepage.</p>
                 </div>
             <% 
-            } else {
+            }
         %>
     </body>
 </html>
