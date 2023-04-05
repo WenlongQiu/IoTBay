@@ -6,14 +6,16 @@ public class user implements Serializable{
     private String password;
     private String emailAddress;
     private String address;
+    private String tos;
     
     public user() {}
     
-    public user(String name, String pwd, String email, String add) {
+    public user(String name, String pwd, String email, String add, String tos) {
         this.fullName = name;
         this.password = pwd;
         this.emailAddress = email;
         this.address = add;
+        this.tos = tos;
     }
 
     public String getFullName() {
@@ -46,6 +48,14 @@ public class user implements Serializable{
 
     public void setAddress(String address) {
         this.address = address;
+    }
+    
+    public String getifAgreeTOS() {
+        return tos;
+    }
+
+    public void setifAgreeTOS(String tos) {
+        this.tos = tos;
     }
 
 }

@@ -19,7 +19,7 @@
         <input type="password" id="password" name="password"></p>
         <p>address:
         <input type="text" id="address" name="address"></p>
-        <p> terms of service:
+        <p>I agree with terms of service:
             <input type="checkbox" id="tos" name="tos"> </p>
         <input type="submit" id="submit" name="submit">
     </form>
